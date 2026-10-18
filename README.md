@@ -45,6 +45,20 @@ La app busca versiones nuevas 10 segundos después de arrancar y luego cada 4 ho
 </details>
 
 <details>
+<summary>¿Cómo desinstalo la app?</summary>
+
+Desde Configuración de Windows › Aplicaciones, busca Gestionalo y pulsa «Desinstalar». Tus datos de `%APPDATA%\BonaGestio` se quedan en el equipo: si vuelves a instalarla, los encontrará. Si quieres borrarlos también, elimina esa carpeta a mano después de desinstalar.
+
+</details>
+
+<details>
+<summary>¿Puedo volver a una versión anterior?</summary>
+
+La app nunca baja de versión sola: solo avisa de versiones más nuevas que la instalada. Puedes descargar el `.exe` de una versión anterior de la [página de versiones](https://github.com/johnalegrealsina/BonaGestio-releases/releases) e instalarlo encima, pero no es algo probado: una versión antigua no conoce los cambios que las nuevas hayan hecho en tus datos. Antes, guarda una copia en Ajustes › Copias de seguridad › «Exportar copia». La app también guarda una copia automática cada vez que se cierra, en `%APPDATA%\BonaGestio\backups`.
+
+</details>
+
+<details>
 <summary>Publico versiones: ¿qué archivos tiene que llevar cada una?</summary>
 
 Tres: `BonaGestio-<versión>-x64-setup.exe`, su `.blockmap` y `latest.yml`. Si falta alguno, las apps instaladas no detectarán la versión nueva o no podrán descargarla.
