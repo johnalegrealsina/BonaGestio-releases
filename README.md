@@ -1,6 +1,6 @@
 # Gestionalo · instaladores
 
-Aquí se publican los instaladores de **Gestionalo** (BonaGestió) para Windows. El código de la app está en otro repositorio, privado; este solo guarda las versiones publicadas.
+Aquí se publican los instaladores de **Gestionalo** (BonaGestió) para Windows.
 
 ## Instalar
 
