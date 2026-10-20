@@ -1,6 +1,6 @@
 # Gestionalo · instaladores
 
-Aquí se publican los instaladores de **Gestionalo** (BonaGestió) para Windows.
+Aquí se publican los instaladores de **Gestionalo** para Windows.
 
 ## Instalar
 
