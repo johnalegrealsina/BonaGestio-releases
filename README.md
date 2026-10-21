@@ -1,6 +1,10 @@
-# Gestionalo · instaladores
+# Gestionalo · instaladores · v0.3.3
 
 Aquí se publican los instaladores de **Gestionalo** para Windows.
+
+<!-- version:start -->
+Publicada el 21/10/2026 · [descargar `BonaGestio-0.3.3-x64-setup.exe`](https://github.com/johnalegrealsina/BonaGestio-releases/releases/download/v0.3.3/BonaGestio-0.3.3-x64-setup.exe) · [novedades y archivos](https://github.com/johnalegrealsina/BonaGestio-releases/releases/tag/v0.3.3)
+<!-- version:end -->
 
 ## Instalar
 
