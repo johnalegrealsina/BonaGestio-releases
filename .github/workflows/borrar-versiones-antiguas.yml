@@ -1,0 +1,40 @@
+# Deja publicada solo la última versión: borra las releases anteriores y sus etiquetas.
+name: Borrar versiones antiguas
+
+on:
+  release:
+    types: [published]
+  # Para lanzarlo a mano desde la pestaña Actions.
+  workflow_dispatch:
+  # Repaso diario por si alguna publicación no lanzó la acción.
+  schedule:
+    - cron: '17 3 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: borrar-versiones-antiguas
+  cancel-in-progress: false
+
+jobs:
+  borrar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Borrar releases y etiquetas anteriores
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          ultima=$(gh release view --json tagName --jq .tagName)
+          echo "Última versión: $ultima"
+          # Los borradores no se tocan: pueden ser una versión que se está subiendo.
+          gh release list --limit 1000 --json tagName,isDraft \
+            --jq '.[] | select(.isDraft == false) | .tagName' |
+          while read -r tag; do
+            if [ "$tag" != "$ultima" ]; then
+              echo "Borrando $tag"
+              gh release delete "$tag" --cleanup-tag --yes
+            fi
+          done
